@@ -1,29 +1,30 @@
 <%- include('partials/header', { title: 'Judy Nguyen | Developer Portfolio' }) %>
 
 <main>
+    <!-- Home / Hero -->
+    <section id="home" class="hero bg-linear-to-br from-primary via-secondary to-accent min-h-screen w-full scroll-mt-24">
+        <div class="hero-content text-center">
+            <div class="max-w-xl">
+                <h1 class="text-5xl font-bold">Hi, I'm Judy!</h1>
+                <p class="py-6 text-lg">
+                    Computer Programming &amp; Analysis student at Seneca Polytechnic, building web apps, games,
+                    and creative-coding projects out of Toronto.
+                </p>
+                <div class="flex justify-center gap-4">
+                    <a href="/#projects" class="btn btn-primary">View Projects</a>
+                    <a href="/#contact" class="btn btn-outline">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <div class="max-w-4xl mx-auto px-6 py-10">
         <div class="rounded-box overflow-hidden shadow-xl">
-
-            <!-- Home / Hero -->
-            <section id="home" class="hero bg-base-100 min-h-[60vh] scroll-mt-24">
-                <div class="hero-content text-center">
-                    <div class="max-w-xl">
-                        <h1 class="text-5xl font-bold">Hi, I'm Judy!</h1>
-                        <p class="py-6 text-lg">
-                            Computer Programming &amp; Analysis student at Seneca Polytechnic, building web apps, games,
-                            and creative-coding projects out of Toronto.
-                        </p>
-                        <div class="flex justify-center gap-4">
-                            <a href="/#projects" class="btn btn-primary">View Projects</a>
-                            <a href="/#contact" class="btn btn-outline">Get in Touch</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <!-- About -->
             <section id="about" class="bg-secondary text-base-content px-8 py-16 scroll-mt-24">
                 <h2 class="text-3xl font-bold mb-8 text-center">About Me</h2>
+                <img src="/img/headshot.jpg" alt="Judy Nguyen" class="w-32 h-32 rounded-full object-cover mx-auto mb-6 shadow-md" />
                 <div class="text-lg space-y-4 max-w-2xl mx-auto">
                     <p>
                         I'm a Computer Programming and Analysis student at Seneca Polytechnic in Toronto, Ontario,
@@ -42,7 +43,7 @@
             <section id="skills" class="bg-base-100 px-8 py-16 scroll-mt-24">
                 <h2 class="text-3xl font-bold mb-12 text-center">Skills</h2>
                 <div class="flex flex-col gap-6 max-w-2xl mx-auto">
-                    <div class="card bg-base-200 shadow-sm">
+                    <div class="card bg-[rgb(244,209,225)] shadow-sm">
                         <div class="card-body">
                             <h3 class="card-title">Languages</h3>
                             <div class="flex flex-wrap gap-2">
@@ -54,7 +55,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card bg-base-200 shadow-sm">
+                    <div class="card bg-[rgb(244,209,225)] shadow-sm">
                         <div class="card-body">
                             <h3 class="card-title">Frameworks &amp; Tools</h3>
                             <div class="flex flex-wrap gap-2">
@@ -66,7 +67,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card bg-base-200 shadow-sm">
+                    <div class="card bg-[rgb(244,209,225)] shadow-sm">
                         <div class="card-body">
                             <h3 class="card-title">Creative &amp; Game Dev</h3>
                             <div class="flex flex-wrap gap-2">
@@ -88,7 +89,9 @@
                 <div class="carousel carousel-center w-full space-x-4 px-8 pb-4">
                     <div id="project-leapy-frog" class="carousel-item">
                         <div class="card w-72 sm:w-80 bg-base-100 text-base-content shadow-sm rounded-box">
-                            <figure class="h-40 bg-linear-to-br from-primary to-accent text-5xl rounded-t-box">🐸</figure>
+                            <figure class="h-40 overflow-hidden rounded-t-box">
+                                <img src="/img/leapy-frog.jpg" alt="Leapy-Frog gameplay" class="w-full h-full object-cover" />
+                            </figure>
                             <div class="card-body">
                                 <h3 class="card-title">Leapy-Frog</h3>
                                 <p>My first Unity project, inspired by the iconic Flappy Bird, built with C# scripting.</p>
@@ -125,7 +128,9 @@
                     </div>
                     <div id="project-musicfromdaheart" class="carousel-item">
                         <div class="card w-72 sm:w-80 bg-base-100 text-base-content shadow-sm rounded-box">
-                            <figure class="h-40 bg-linear-to-br from-accent to-primary text-5xl rounded-t-box">🎶</figure>
+                            <figure class="h-40 overflow-hidden rounded-t-box">
+                                <img src="/img/music-da-heart.jpg" alt="MusicFromDaHeart" class="w-full h-full object-cover" />
+                            </figure>
                             <div class="card-body">
                                 <h3 class="card-title">MusicFromDaHeart</h3>
                                 <p>Built at Hack the 6ix 2026. Turns real-time heart rate and Apple Pencil input into generative instrumental music that crossfades between calm, energetic, and tense moods.</p>
@@ -138,7 +143,9 @@
                     </div>
                     <div id="project-utopia" class="carousel-item">
                         <div class="card w-72 sm:w-80 bg-base-100 text-base-content shadow-sm rounded-box">
-                            <figure class="h-40 bg-linear-to-br from-secondary to-accent text-5xl rounded-t-box">🕹️</figure>
+                            <figure class="h-40 overflow-hidden rounded-t-box">
+                                <img src="/img/utopia.png" alt="Utopia visual novel" class="w-full h-full object-cover" />
+                            </figure>
                             <div class="card-body">
                                 <h3 class="card-title">Utopia</h3>
                                 <p>Built at HuskyHack 2026. A Ren'Py visual novel following a legal immigrant's encounter with ICE, where a real-time suspicion meter decides whether you make it through the night.</p>
@@ -151,11 +158,12 @@
                     </div>
                     <div id="project-codexperts" class="carousel-item">
                         <div class="card w-72 sm:w-80 bg-base-100 text-base-content shadow-sm rounded-box">
-                            <!-- TODO: replace with a real screenshot once available -->
-                            <figure class="h-40 bg-base-200 text-base-content/50 text-sm rounded-t-box border-b-2 border-dashed border-base-300">Screenshot coming soon</figure>
+                            <figure class="h-40 overflow-hidden rounded-t-box">
+                                <img src="/img/CodeXperts-web.jpg" alt="codeXperts Members and Profile screens" class="w-full h-full object-cover" />
+                            </figure>
                             <div class="card-body">
                                 <h3 class="card-title">codeXperts &ndash; Members &amp; Profiles</h3>
-                                <p>Contributed to the Members and Profiles page for codeXperts, a student-led dev club at Seneca College and York University. The feature is role-gated, so this thumbnail is a placeholder for now.</p>
+                                <p>Contributed to the Members and Profiles screens for codeXperts, a student-led dev club at Seneca College and York University. The feature is role-gated, so this is a look at both screens I worked on.</p>
                                 <div class="card-actions justify-end">
                                     <a href="https://www.codexperts.ca/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Visit Site</a>
                                 </div>
@@ -170,7 +178,7 @@
                 <h2 class="text-3xl font-bold mb-4 text-center">Experience</h2>
                 <!-- TODO: add the actual PDF at public/resume.pdf -->
                 <div class="text-center mb-12">
-                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-accent btn-sm">Download Full Resume</a>
+                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-accent btn-sm">Full Resume</a>
                 </div>
                 <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical max-w-2xl mx-auto">
                     <li>
@@ -200,8 +208,8 @@
                             <p class="text-sm opacity-70">codeXperts &middot; Toronto, ON</p>
                             <p class="mt-1">Manage club finances and vendor relationships, co-facilitate coding sessions, and contribute to the club's website and Instagram.</p>
                         </div>
-                        <hr />
                     </li>
+                    <!-- Performing arts experience, undecided whether to include:
                     <li>
                         <hr />
                         <div class="timeline-middle">
@@ -246,6 +254,7 @@
                             <p class="mt-1">Bridged creative, technical, and venue teams to design, build, and stage the show's set over two months.</p>
                         </div>
                     </li>
+                    -->
                 </ul>
             </section>
 
