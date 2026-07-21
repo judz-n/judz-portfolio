@@ -106,7 +106,7 @@
                                 <h3 class="card-title">Digital Art Gallery</h3>
                                 <p>A collection of icons and sprites created with Inkscape and Pixelorama.</p>
                                 <div class="card-actions justify-end">
-                                    <a href="https://github.com/judz-n/digital-art-gallery" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Code</a>
+                                    <a href="https://github.com/judz-n/digital-art-gallery" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Repo</a>
                                 </div>
                             </div>
                         </div>
@@ -149,37 +149,101 @@
                             </div>
                         </div>
                     </div>
+                    <div id="project-codexperts" class="carousel-item">
+                        <div class="card w-72 sm:w-80 bg-base-100 text-base-content shadow-sm rounded-box">
+                            <!-- TODO: replace with a real screenshot once available -->
+                            <figure class="h-40 bg-base-200 text-base-content/50 text-sm rounded-t-box border-b-2 border-dashed border-base-300">Screenshot coming soon</figure>
+                            <div class="card-body">
+                                <h3 class="card-title">codeXperts &ndash; Members &amp; Profiles</h3>
+                                <p>Contributed to the Members and Profiles page for codeXperts, a student-led dev club at Seneca College and York University. The feature is role-gated, so this thumbnail is a placeholder for now.</p>
+                                <div class="card-actions justify-end">
+                                    <a href="https://www.codexperts.ca/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Visit Site</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <!-- Experience -->
             <section id="experience" class="bg-base-100 px-8 py-16 scroll-mt-24">
-                <h2 class="text-3xl font-bold mb-12 text-center">Experience</h2>
-                <ul class="timeline timeline-vertical max-w-2xl mx-auto">
+                <h2 class="text-3xl font-bold mb-4 text-center">Experience</h2>
+                <!-- TODO: add the actual PDF at public/resume.pdf -->
+                <div class="text-center mb-12">
+                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-accent btn-sm">Download Full Resume</a>
+                </div>
+                <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical max-w-2xl mx-auto">
                     <li>
-                        <div class="timeline-start">2025 &ndash; Present</div>
                         <div class="timeline-middle">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-accent">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
                             </svg>
                         </div>
-                        <div class="timeline-end timeline-box">
-                            <h3 class="font-bold">Computer Programming &amp; Analysis</h3>
-                            <p>Seneca Polytechnic, Toronto, ON. Expected graduation 2028</p>
+                        <div class="timeline-start mb-10 md:text-end bg-[rgb(244,209,225)] rounded-box p-4 shadow-sm">
+                            <time class="font-mono italic text-sm opacity-70">2025 &ndash; Present</time>
+                            <div class="text-lg font-black">Computer Programming &amp; Analysis</div>
+                            <p class="text-sm opacity-70">Seneca Polytechnic, Toronto, ON</p>
+                            <p class="mt-1">Expected graduation 2028</p>
                         </div>
                         <hr />
                     </li>
                     <li>
                         <hr />
-                        <div class="timeline-start">2025 &ndash; Present</div>
                         <div class="timeline-middle">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-accent">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
                             </svg>
                         </div>
-                        <div class="timeline-end timeline-box">
-                            <h3 class="font-bold">Hackathon Participant</h3>
-                            <p>Building web and game projects at student hackathons.</p>
+                        <div class="timeline-end md:mb-10 bg-[rgb(244,209,225)] rounded-box p-4 shadow-sm">
+                            <time class="font-mono italic text-sm opacity-70">May 2026 &ndash; Present</time>
+                            <div class="text-lg font-black">Treasurer</div>
+                            <p class="text-sm opacity-70">codeXperts &middot; Toronto, ON</p>
+                            <p class="mt-1">Manage club finances and vendor relationships, co-facilitate coding sessions, and contribute to the club's website and Instagram.</p>
+                        </div>
+                        <hr />
+                    </li>
+                    <li>
+                        <hr />
+                        <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-accent">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="timeline-start mb-10 md:text-end bg-[rgb(244,209,225)] rounded-box p-4 shadow-sm">
+                            <time class="font-mono italic text-sm opacity-70">May 2025 &ndash; Jan 2026</time>
+                            <div class="text-lg font-black">Voice Actor (Title TBA)</div>
+                            <p class="text-sm opacity-70">Super Sonics Production &middot; Toronto, ON</p>
+                            <p class="mt-1">Learned dubbing on the job and adapted performances in real time for a children's audience.</p>
+                        </div>
+                        <hr />
+                    </li>
+                    <li>
+                        <hr />
+                        <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-accent">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="timeline-end md:mb-10 bg-[rgb(244,209,225)] rounded-box p-4 shadow-sm">
+                            <time class="font-mono italic text-sm opacity-70">Mar &ndash; May 2025</time>
+                            <div class="text-lg font-black">Voice Actor (Sparkles Magical Market)</div>
+                            <p class="text-sm opacity-70">Spin Master &middot; Toronto, ON</p>
+                            <p class="mt-1">Recorded multiple episodes per session, improvising lines to bring extra charm to the character.</p>
+                        </div>
+                        <hr />
+                    </li>
+                    <li>
+                        <hr />
+                        <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-accent">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="timeline-start mb-10 md:text-end bg-[rgb(244,209,225)] rounded-box p-4 shadow-sm">
+                            <time class="font-mono italic text-sm opacity-70">Sep 2023 &ndash; Mar 2024</time>
+                            <div class="text-lg font-black">Co-head of Set &amp; Props / Light Design / Tech Producer / Actor</div>
+                            <p class="text-sm opacity-70">SLC Original Production &middot; Brockville, ON</p>
+                            <p class="mt-1">Bridged creative, technical, and venue teams to design, build, and stage the show's set over two months.</p>
                         </div>
                     </li>
                 </ul>
