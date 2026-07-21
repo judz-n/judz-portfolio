@@ -1,0 +1,173 @@
+<%- include('partials/header', { title: 'Judy Nguyen | Developer Portfolio' }) %>
+
+<main>
+    <div class="max-w-4xl mx-auto px-6 py-10">
+        <div class="rounded-box overflow-hidden shadow-xl">
+
+            <!-- Home / Hero -->
+            <section id="home" class="hero bg-base-100 min-h-[60vh] scroll-mt-24">
+                <div class="hero-content text-center">
+                    <div class="max-w-xl">
+                        <h1 class="text-5xl font-bold">Hi, I'm Judy!</h1>
+                        <p class="py-6 text-lg">
+                            Computer Programming &amp; Analysis student at Seneca Polytechnic, building web apps, games,
+                            and creative-coding projects out of Toronto.
+                        </p>
+                        <div class="flex justify-center gap-4">
+                            <a href="/#projects" class="btn btn-primary">View Projects</a>
+                            <a href="/#contact" class="btn btn-outline">Get in Touch</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About -->
+            <section id="about" class="bg-secondary text-base-content px-8 py-16 scroll-mt-24">
+                <h2 class="text-3xl font-bold mb-8 text-center">About Me</h2>
+                <div class="text-lg space-y-4 max-w-2xl mx-auto">
+                    <p>
+                        I'm a Computer Programming and Analysis student at Seneca Polytechnic in Toronto, Ontario,
+                        expecting to graduate in 2028. I like building things across the stack — from small web apps
+                        like this one to my first Unity game.
+                    </p>
+                    <p>
+                        Outside of coursework, I've started dabbling in hackathons and creative coding, and I spend
+                        a fair bit of time making digital art and sprites. This site is a running project as I learn
+                        more about full-stack development.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Skills -->
+            <section id="skills" class="bg-base-100 px-8 py-16 scroll-mt-24">
+                <h2 class="text-3xl font-bold mb-12 text-center">Skills</h2>
+                <div class="flex flex-col gap-6 max-w-2xl mx-auto">
+                    <div class="card bg-base-200 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title">Languages</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="badge badge-primary">JavaScript</span>
+                                <span class="badge badge-primary">C#</span>
+                                <span class="badge badge-primary">C++</span>
+                                <span class="badge badge-primary">HTML5</span>
+                                <span class="badge badge-primary">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-200 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title">Frameworks &amp; Tools</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="badge badge-secondary">Node.js</span>
+                                <span class="badge badge-secondary">Express</span>
+                                <span class="badge badge-secondary">EJS</span>
+                                <span class="badge badge-secondary">Tailwind CSS</span>
+                                <span class="badge badge-secondary">daisyUI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-200 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title">Creative &amp; Game Dev</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="badge badge-accent">Unity</span>
+                                <span class="badge badge-accent">Inkscape</span>
+                                <span class="badge badge-accent">Pixelorama</span>
+                                <span class="badge badge-accent">Git</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects -->
+            <section id="projects" class="bg-secondary text-base-content py-16 scroll-mt-24">
+                <h2 class="text-3xl font-bold mb-12 text-center px-8">Projects</h2>
+
+                <!-- TODO: swap the emoji figures for real project screenshots -->
+                <div class="carousel carousel-center w-full space-x-4 px-8 pb-4">
+                    <div id="project-leapy-frog" class="carousel-item">
+                        <div class="card w-72 sm:w-80 bg-base-100 text-base-content shadow-sm rounded-box">
+                            <figure class="h-40 bg-linear-to-br from-primary to-accent text-5xl rounded-t-box">🐸</figure>
+                            <div class="card-body">
+                                <h3 class="card-title">Leapy-Frog</h3>
+                                <p>My first Unity project, inspired by the iconic Flappy Bird, built with C# scripting.</p>
+                                <div class="card-actions justify-end">
+                                    <a href="https://judz-n.github.io/play-leapy-frog/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">Play</a>
+                                    <a href="https://github.com/judz-n/Leapy-Frog" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="project-digital-art" class="carousel-item">
+                        <div class="card w-72 sm:w-80 bg-base-100 text-base-content shadow-sm rounded-box">
+                            <figure class="h-40 bg-linear-to-br from-accent to-secondary text-5xl rounded-t-box">🎨</figure>
+                            <div class="card-body">
+                                <h3 class="card-title">Digital Art Gallery</h3>
+                                <p>A collection of icons and sprites created with Inkscape and Pixelorama.</p>
+                                <div class="card-actions justify-end">
+                                    <a href="https://github.com/judz-n/digital-art-gallery" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="project-portfolio" class="carousel-item">
+                        <div class="card w-72 sm:w-80 bg-base-100 text-base-content shadow-sm rounded-box">
+                            <figure class="h-40 bg-linear-to-br from-secondary to-primary text-5xl rounded-t-box">💼</figure>
+                            <div class="card-body">
+                                <h3 class="card-title">This Portfolio</h3>
+                                <p>A work-in-progress personal site built with Express, EJS, Tailwind CSS, and daisyUI.</p>
+                                <div class="card-actions justify-end">
+                                    <a href="https://github.com/judz-n/judz-portfolio" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience -->
+            <section id="experience" class="bg-base-100 px-8 py-16 scroll-mt-24">
+                <h2 class="text-3xl font-bold mb-12 text-center">Experience</h2>
+                <ul class="timeline timeline-vertical max-w-2xl mx-auto">
+                    <li>
+                        <div class="timeline-start">2025 &ndash; Present</div>
+                        <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-primary">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="timeline-end timeline-box">
+                            <h3 class="font-bold">Computer Programming &amp; Analysis</h3>
+                            <p>Seneca Polytechnic, Toronto, ON &mdash; expected graduation 2028</p>
+                        </div>
+                        <hr />
+                    </li>
+                    <li>
+                        <hr />
+                        <div class="timeline-start">2025 &ndash; Present</div>
+                        <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-primary">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="timeline-end timeline-box">
+                            <h3 class="font-bold">Hackathon Participant</h3>
+                            <p>Building web and game projects at student hackathons.</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Contact -->
+            <section id="contact" class="bg-secondary text-base-content px-8 py-16 text-center scroll-mt-24">
+                <h2 class="text-3xl font-bold mb-4">Let's Connect</h2>
+                <p class="mb-8">Interested in working together, or just want to say hi? Reach out below.</p>
+                <a href="mailto:judytramnguyen@gmail.com" class="btn btn-primary">Say Hello</a>
+            </section>
+
+        </div>
+    </div>
+</main>
+
+<%- include('partials/footer') %>

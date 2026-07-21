@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "valentine";
+  default: true;
+  --color-base-100: rgb(136, 69, 137);
+  --color-base-200: rgb(95 48 96);
+  --color-base-300: rgb(54 28 55);
+  --color-primary: rgb(196, 49, 137);
+  --color-secondary: rgb(156, 121, 201);
+  --color-neutral: rgb(106 2 65);
+  --color-accent: rgb(105, 218, 214);
+  --color-content: rgb(244, 209, 225);
+  --color-base-content: rgb(45, 0, 38);
+}
+
+@theme {
+  --font-sans: 'Tahoma', sans-serif;
+}
