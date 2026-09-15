@@ -2,10 +2,10 @@
 
 <main>
     <!-- Home / Hero -->
-    <section id="home" class="hero bg-linear-to-br from-primary via-secondary to-accent min-h-screen w-full scroll-mt-24">
+    <section id="home" class="hero bg-linear-to-br from-blush via-secondary to-periwinkle min-h-screen w-full scroll-mt-24">
         <div class="hero-content text-center">
             <div class="max-w-xl">
-                <h1 class="text-5xl font-bold">Hi, I'm Judy!</h1>
+                <h1 class="text-5xl font-bold text-primary">Hi, I'm Judy!</h1>
                 <p class="py-6 text-lg">
                     Computer Programming &amp; Analysis student at Seneca Polytechnic, building web apps, games,
                     and creative-coding projects out of Toronto.
@@ -43,7 +43,7 @@
             <section id="skills" class="bg-base-100 px-8 py-16 scroll-mt-24">
                 <h2 class="text-3xl font-bold mb-12 text-center">Skills</h2>
                 <div class="flex flex-col gap-6 max-w-2xl mx-auto">
-                    <div class="card bg-[rgb(244,209,225)] shadow-sm">
+                    <div class="card bg-content shadow-sm">
                         <div class="card-body">
                             <h3 class="card-title">Languages</h3>
                             <div class="flex flex-wrap gap-2">
@@ -55,7 +55,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card bg-[rgb(244,209,225)] shadow-sm">
+                    <div class="card bg-content shadow-sm">
                         <div class="card-body">
                             <h3 class="card-title">Frameworks &amp; Tools</h3>
                             <div class="flex flex-wrap gap-2">
@@ -67,7 +67,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card bg-[rgb(244,209,225)] shadow-sm">
+                    <div class="card bg-content shadow-sm">
                         <div class="card-body">
                             <h3 class="card-title">Creative &amp; Game Dev</h3>
                             <div class="flex flex-wrap gap-2">
@@ -87,6 +87,19 @@
 
                 <!-- TODO: swap the emoji figures for real project screenshots -->
                 <div class="carousel carousel-center w-full space-x-4 px-8 pb-4">
+                    <div id="project-artist-website" class="carousel-item">
+                        <div class="card w-72 sm:w-80 bg-base-100 text-base-content shadow-sm rounded-box">
+                            <figure class="h-40 bg-linear-to-br from-blush via-secondary to-primary text-5xl rounded-t-box">🎙️</figure>
+                            <div class="card-body">
+                                <h3 class="card-title">Artist Website</h3>
+                                <p>My latest project: a personal site promoting my work as a voice-over artist, with demos, my home studio setup, and a social gallery. Built with Tailwind CSS and daisyUI.</p>
+                                <div class="card-actions justify-end">
+                                    <a href="https://judynguyen-voice.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">Visit Site</a>
+                                    <a href="https://github.com/judz-n/VO-artist-website" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div id="project-leapy-frog" class="carousel-item">
                         <div class="card w-72 sm:w-80 bg-base-100 text-base-content shadow-sm rounded-box">
                             <figure class="h-40 overflow-hidden rounded-t-box">
@@ -183,11 +196,11 @@
                 <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical max-w-2xl mx-auto">
                     <li>
                         <div class="timeline-middle">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-accent">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-orchid">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
                             </svg>
                         </div>
-                        <div class="timeline-start mb-10 md:text-end bg-[rgb(244,209,225)] rounded-box p-4 shadow-sm">
+                        <div class="timeline-start mb-10 md:text-end bg-content rounded-box p-4 shadow-sm">
                             <time class="font-mono italic text-sm opacity-70">2025 &ndash; Present</time>
                             <div class="text-lg font-black">Computer Programming &amp; Analysis</div>
                             <p class="text-sm opacity-70">Seneca Polytechnic, Toronto, ON</p>
@@ -198,11 +211,11 @@
                     <li>
                         <hr />
                         <div class="timeline-middle">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-accent">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-orchid">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
                             </svg>
                         </div>
-                        <div class="timeline-end md:mb-10 bg-[rgb(244,209,225)] rounded-box p-4 shadow-sm">
+                        <div class="timeline-end md:mb-10 bg-content rounded-box p-4 shadow-sm">
                             <time class="font-mono italic text-sm opacity-70">May 2026 &ndash; Present</time>
                             <div class="text-lg font-black">Treasurer</div>
                             <p class="text-sm opacity-70">codeXperts &middot; Toronto, ON</p>
@@ -213,11 +226,11 @@
                     <li>
                         <hr />
                         <div class="timeline-middle">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-accent">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-orchid">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
                             </svg>
                         </div>
-                        <div class="timeline-start mb-10 md:text-end bg-[rgb(244,209,225)] rounded-box p-4 shadow-sm">
+                        <div class="timeline-start mb-10 md:text-end bg-content rounded-box p-4 shadow-sm">
                             <time class="font-mono italic text-sm opacity-70">May 2025 &ndash; Jan 2026</time>
                             <div class="text-lg font-black">Voice Actor (Title TBA)</div>
                             <p class="text-sm opacity-70">Super Sonics Production &middot; Toronto, ON</p>
@@ -228,11 +241,11 @@
                     <li>
                         <hr />
                         <div class="timeline-middle">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-accent">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-orchid">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
                             </svg>
                         </div>
-                        <div class="timeline-end md:mb-10 bg-[rgb(244,209,225)] rounded-box p-4 shadow-sm">
+                        <div class="timeline-end md:mb-10 bg-content rounded-box p-4 shadow-sm">
                             <time class="font-mono italic text-sm opacity-70">Mar &ndash; May 2025</time>
                             <div class="text-lg font-black">Voice Actor (Sparkles Magical Market)</div>
                             <p class="text-sm opacity-70">Spin Master &middot; Toronto, ON</p>
@@ -243,15 +256,15 @@
                     <li>
                         <hr />
                         <div class="timeline-middle">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-accent">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-orchid">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
                             </svg>
                         </div>
-                        <div class="timeline-start mb-10 md:text-end bg-[rgb(244,209,225)] rounded-box p-4 shadow-sm">
+                        <div class="timeline-start mb-10 md:text-end bg-content rounded-box p-4 shadow-sm">
                             <time class="font-mono italic text-sm opacity-70">Sep 2023 &ndash; Mar 2024</time>
                             <div class="text-lg font-black">Co-head of Set &amp; Props / Light Design / Tech Producer / Actor</div>
                             <p class="text-sm opacity-70">SLC Original Production &middot; Brockville, ON</p>
-                            <p class="mt-1">Bridged creative, technical, and venue teams to design, build, and stage the show's set over two months.</p>
+                            <p class="mt-1">Bridged creative, technical, and venue teams to design, build, and stage the show's set over six months.</p>
                         </div>
                     </li>
                     -->

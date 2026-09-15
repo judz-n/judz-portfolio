@@ -28,6 +28,10 @@
     --radius-lg: 0.5rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-content: #d4c5f3;
+    --color-blush: #f8cfe3;
+    --color-periwinkle: #b9c6f5;
+    --color-orchid: #8a45c2;
   }
 }
 @layer base {
@@ -1403,20 +1407,23 @@
     border-top-left-radius: var(--radius-box);
     border-top-right-radius: var(--radius-box);
   }
-  .bg-\[rgb\(166\,116\,167\)\]\/95 {
-    background-color: color-mix(in oklab, rgb(166,116,167) 95%, transparent);
-  }
-  .bg-\[rgb\(244\,209\,225\)\] {
-    background-color: rgb(244,209,225);
-  }
   .bg-base-100 {
     background-color: var(--color-base-100);
+  }
+  .bg-base-100\/90 {
+    background-color: var(--color-base-100);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-base-100) 90%, transparent);
+    }
   }
   .bg-base-200 {
     background-color: var(--color-base-200);
   }
   .bg-base-300 {
     background-color: var(--color-base-300);
+  }
+  .bg-content {
+    background-color: var(--color-content);
   }
   .bg-neutral {
     background-color: var(--color-neutral);
@@ -1481,8 +1488,8 @@
     --tw-gradient-from: var(--color-accent);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
-  .from-primary {
-    --tw-gradient-from: var(--color-primary);
+  .from-blush {
+    --tw-gradient-from: var(--color-blush);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
   .from-secondary {
@@ -1494,8 +1501,8 @@
     --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
     --tw-gradient-stops: var(--tw-gradient-via-stops);
   }
-  .to-accent {
-    --tw-gradient-to: var(--color-accent);
+  .to-periwinkle {
+    --tw-gradient-to: var(--color-periwinkle);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
   .to-primary {
@@ -1583,14 +1590,17 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
-  .text-accent {
-    color: var(--color-accent);
-  }
   .text-base-content {
     color: var(--color-base-content);
   }
   .text-neutral-content {
     color: var(--color-neutral-content);
+  }
+  .text-orchid {
+    color: var(--color-orchid);
+  }
+  .text-primary {
+    color: var(--color-primary);
   }
   .italic {
     font-style: italic;
@@ -1719,10 +1729,10 @@
       }
     }
   }
-  .hover\:text-\[rgb\(244\,209\,225\)\] {
+  .hover\:text-primary-content {
     &:hover {
       @media (hover: hover) {
-        color: rgb(244,209,225);
+        color: var(--color-primary-content);
       }
     }
   }
@@ -2091,26 +2101,26 @@
 @layer base {
   :where(:root),:root:has(input.theme-controller[value=valentine]:checked),[data-theme="valentine"] {
     color-scheme: normal;
-    --color-base-100: rgb(136, 69, 137);
-    --color-base-200: rgb(95 48 96);
-    --color-base-300: rgb(54 28 55);
-    --color-base-content: rgb(45, 0, 38);
-    --color-primary: rgb(196, 49, 137);
-    --color-primary-content: oklch(100% 0 0);
-    --color-secondary: rgb(156, 121, 201);
-    --color-secondary-content: oklch(97% 0.014 308.299);
-    --color-accent: rgb(105, 218, 214);
-    --color-accent-content: oklch(39% 0.09 240.876);
-    --color-neutral: rgb(106 2 65);
-    --color-neutral-content: oklch(89% 0.061 343.231);
-    --color-info: oklch(86% 0.127 207.078);
-    --color-info-content: oklch(44% 0.11 240.79);
-    --color-success: oklch(84% 0.143 164.978);
-    --color-success-content: oklch(43% 0.095 166.913);
-    --color-warning: oklch(75% 0.183 55.934);
-    --color-warning-content: oklch(26% 0.079 36.259);
-    --color-error: oklch(63% 0.237 25.331);
-    --color-error-content: oklch(97% 0.013 17.38);
+    --color-base-100: #eddff1;
+    --color-base-200: #f1e8fc;
+    --color-base-300: #d0b9d5;
+    --color-base-content: #28103a;
+    --color-primary: #5e1f8f;
+    --color-primary-content: #fcf9ff;
+    --color-secondary: #cbb2f2;
+    --color-secondary-content: #28103a;
+    --color-accent: #a6e8d2;
+    --color-accent-content: #123d30;
+    --color-neutral: #28103a;
+    --color-neutral-content: #eadcfb;
+    --color-info: #b9c6f5;
+    --color-info-content: #1b2a5c;
+    --color-success: #b5ecc1;
+    --color-success-content: #17401f;
+    --color-warning: #f8dca0;
+    --color-warning-content: #4a3308;
+    --color-error: #f5a9bd;
+    --color-error-content: #5a1026;
     --radius-selector: 1rem;
     --radius-field: 2rem;
     --radius-box: 1rem;
@@ -2119,7 +2129,6 @@
     --border: 1px;
     --depth: 0;
     --noise: 0;
-    --color-content: rgb(244, 209, 225);
   }
 }
 @property --tw-space-y-reverse {
