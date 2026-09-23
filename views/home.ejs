@@ -89,7 +89,9 @@
                 <div class="carousel carousel-center w-full space-x-4 px-8 pb-4">
                     <div id="project-artist-website" class="carousel-item">
                         <div class="card w-72 sm:w-80 bg-base-100 text-base-content shadow-sm rounded-box">
-                            <figure class="h-40 bg-linear-to-br from-blush via-secondary to-primary text-5xl rounded-t-box">🎙️</figure>
+                            <figure class="h-40 overflow-hidden rounded-t-box">
+                                <img src="/img/booth.jpg" alt="Judy Nguyen's home recording booth" class="w-full h-full object-cover" />
+                            </figure>
                             <div class="card-body">
                                 <h3 class="card-title">Artist Website</h3>
                                 <p>My latest project: a personal site promoting my work as a voice-over artist, with demos, my home studio setup, and a social gallery. Built with Tailwind CSS and daisyUI.</p>
@@ -123,18 +125,6 @@
                                 <p>A collection of icons and sprites created with Inkscape and Pixelorama.</p>
                                 <div class="card-actions justify-end">
                                     <a href="https://github.com/judz-n/digital-art-gallery" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Repo</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="project-portfolio" class="carousel-item">
-                        <div class="card w-72 sm:w-80 bg-base-100 text-base-content shadow-sm rounded-box">
-                            <figure class="h-40 bg-linear-to-br from-secondary to-primary text-5xl rounded-t-box">💼</figure>
-                            <div class="card-body">
-                                <h3 class="card-title">This Portfolio</h3>
-                                <p>A work-in-progress personal site built with Express, EJS, Tailwind CSS, and daisyUI.</p>
-                                <div class="card-actions justify-end">
-                                    <a href="https://github.com/judz-n/judz-portfolio" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Code</a>
                                 </div>
                             </div>
                         </div>
@@ -274,8 +264,44 @@
             <!-- Contact -->
             <section id="contact" class="bg-secondary text-base-content px-8 py-16 text-center scroll-mt-24">
                 <h2 class="text-3xl font-bold mb-4">Let's Connect</h2>
-                <p class="mb-8">Interested in working together, or just want to say hi? Reach out below.</p>
-                <a href="mailto:judytramnguyen@gmail.com" class="btn btn-primary">Say Hello</a>
+                <p class="mb-8">Interested in working together, or just want to say hi? Send me a message.</p>
+
+                <% const sentStatus = typeof sent !== 'undefined' ? sent : null; %>
+                <% if (sentStatus === 'ok') { %>
+                    <div role="alert" class="alert alert-success max-w-xl mx-auto mb-8 text-left">
+                        <span>Thanks for reaching out! Your message is on its way and I'll get back to you soon.</span>
+                    </div>
+                <% } else if (sentStatus === 'invalid') { %>
+                    <div role="alert" class="alert alert-error max-w-xl mx-auto mb-8 text-left">
+                        <span>Please fill in your name, a valid email address, and a message, then try again.</span>
+                    </div>
+                <% } else if (sentStatus === 'error') { %>
+                    <div role="alert" class="alert alert-error max-w-xl mx-auto mb-8 text-left">
+                        <span>Something went wrong sending your message. Please email me directly at
+                            <a class="link" href="mailto:judytramnguyen@gmail.com">judytramnguyen@gmail.com</a>.</span>
+                    </div>
+                <% } %>
+
+                <form action="/contact" method="post" class="max-w-xl mx-auto text-left">
+                    <fieldset class="fieldset">
+                        <label class="label" for="contact-name">Name</label>
+                        <input type="text" id="contact-name" name="name" required maxlength="100"
+                               placeholder="Your name" class="input w-full" />
+
+                        <label class="label" for="contact-email">Email</label>
+                        <input type="email" id="contact-email" name="email" required maxlength="254"
+                               placeholder="you@example.com" class="input w-full" />
+
+                        <label class="label" for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" required maxlength="5000" rows="5"
+                                  placeholder="What would you like to talk about?" class="textarea w-full"></textarea>
+
+                        <!-- honeypot: hidden from people, bots tend to fill it in -->
+                        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hidden" />
+
+                        <button type="submit" class="btn btn-primary mt-4">Send Message</button>
+                    </fieldset>
+                </form>
             </section>
 
         </div>
