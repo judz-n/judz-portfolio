@@ -6,6 +6,23 @@ const HTTP_PORT = process.env.PORT || 3000;
 // where contact form messages are delivered
 const CONTACT_TO = 'judytramnguyen@gmail.com';
 
+const CONTACT_MESSAGES = {
+    ok: "Thanks for reaching out! Your message is on its way and I'll get back to you soon.",
+    invalid: 'Please fill in your name, a valid email address, and a message, then try again.',
+    error: `Something went wrong sending your message. Please email me directly at ${CONTACT_TO}.`,
+};
+
+// answer JSON for background submissions, redirect for plain form posts (no JavaScript)
+function respondToContact(req, res, status) {
+    const httpStatus = status === 'ok' ? 200 : status === 'invalid' ? 400 : 500;
+
+    if (req.accepts(['html', 'json']) === 'json') {
+        return res.status(httpStatus).json({ status, message: CONTACT_MESSAGES[status] });
+    }
+
+    res.redirect(`/?sent=${status}#contact`);
+}
+
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
@@ -24,7 +41,7 @@ app.post('/contact', async (req, res) => {
 
     // honeypot: hidden from people, commonly filled in by bots
     if (website.trim()) {
-        return res.redirect('/?sent=ok#contact');
+        return respondToContact(req, res, 'ok');
     }
 
     const contact = {
@@ -35,12 +52,12 @@ app.post('/contact', async (req, res) => {
 
     const emailLooksValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact.email);
     if (!contact.name || !contact.message || !emailLooksValid) {
-        return res.redirect('/?sent=invalid#contact');
+        return respondToContact(req, res, 'invalid');
     }
 
     if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
         console.error('contact form: GMAIL_USER / GMAIL_APP_PASSWORD are not set');
-        return res.redirect('/?sent=error#contact');
+        return respondToContact(req, res, 'error');
     }
 
     try {
@@ -60,10 +77,10 @@ app.post('/contact', async (req, res) => {
             text: `Name: ${contact.name}\nEmail: ${contact.email}\n\n${contact.message}\n`,
         });
 
-        res.redirect('/?sent=ok#contact');
+        respondToContact(req, res, 'ok');
     } catch (err) {
         console.error('contact form: could not send message', err);
-        res.redirect('/?sent=error#contact');
+        respondToContact(req, res, 'error');
     }
 });
 
